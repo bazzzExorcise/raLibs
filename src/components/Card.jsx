@@ -5,7 +5,7 @@ const Card = () => {
   const [bookData, setBookData] = useState([])
 
   useEffect(() => {
-    let search = "html, css, javascript"
+    let search = "marvel"
     axios.get('https://www.googleapis.com/books/v1/volumes?q='+search+'&key=AIzaSyA6SaT23KNiiA6DnUfUQTvFeyAcQEkwnSU'+'&maxResults=21')
     .then(res => setBookData(res.data.items))
     .catch(err=>console.log(err))
